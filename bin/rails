@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-# This constant must appear in this script in order to get the rails executable to run it...
-APP_PATH = nil
+APP_PATH = File.expand_path('../config/application', __dir__)
 
 require "rails/commands"

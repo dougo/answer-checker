@@ -1,4 +1,4 @@
-require 'rails/application'
+require 'rails'
 
 module AnswerChecker
   class Application < Rails::Application
