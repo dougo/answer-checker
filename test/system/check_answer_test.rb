@@ -1,13 +1,12 @@
-ENV['RAILS_ENV'] ||= 'test'
-
+require 'test_helper'
 require 'webdrivers'
-
-require_relative '../../config/environment'
 
 class CheckAnswerTest < ActionDispatch::SystemTestCase
   driven_by :selenium, using: :headless_chrome
 
   test 'check an answer' do
     visit '/'
+    assert_title 'Answer Checker'
+    assert_field 'Check answer:'
   end
 end
